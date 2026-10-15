@@ -1,0 +1,41 @@
+{
+	"$schema": "./node_modules/@emdash-cms/plugin-cli/schemas/emdash-plugin.schema.json",
+
+	"slug": "announcement-bar",
+	"publisher": "did:plc:vvm75pgx6ihqfuil7y5awyge",
+
+	"name": "Announcement Bar",
+	"description": "A bar at the top or bottom of every page with a message and a link. Start and end dates, close button, your colours.",
+	"keywords": ["announcement bar", "notification bar", "top bar", "promo bar", "banner"],
+
+	"license": "MIT",
+	"author": { "name": "DesiDash Lab" },
+	"security": { "email": "desidashlab@gmail.com" },
+	"repo": "https://github.com/desidashlab/emdash-announcement-bar",
+
+	"release": {
+		"artifacts": {
+			"icon": { "file": "assets/icon.png" },
+			"banner": { "file": "assets/banner.png" },
+			"screenshots": [
+				{ "file": "assets/screenshot-site.jpg" },
+				{ "file": "assets/screenshot-bar.jpg" },
+				{ "file": "assets/screenshot-setup.jpg" }
+			]
+		}
+	},
+
+	"sections": {
+		"installation": { "file": "docs/installation.md" },
+		"faq": { "file": "docs/faq.md" },
+		"changelog": { "file": "docs/changelog.md" }
+	},
+
+	// No access to your content or the outside world. The bar is drawn in the visitor's browser from your settings.
+	"capabilities": [],
+	"allowedHosts": [],
+
+	"admin": {
+		"pages": [{ "path": "/overview", "label": "Announcement Bar", "icon": "megaphone" }]
+	}
+}
